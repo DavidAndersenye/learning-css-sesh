@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        /* Define a CSS Grid container */
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* Define three rows - navbar, content, footer */
+            grid-template-columns: 1fr; /* Single column layout */
+            min-height: 100vh; /* Make sure the grid covers the entire viewport height */
+            gap: 10px; /* Add some gap between grid items */
+            grid-template-areas:
+                "navbar"
+                "header"
+                "content"
+                "footer";
+        }
+
+        /* Style the navbar */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            grid-area: navbar; /* Place the navbar in the "navbar" grid area */
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+            grid-area: header; /* Place the header in the "header" grid area */
+        }
+
+        /* Style the footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            grid-area: footer; /* Place the footer in the "footer" grid area */
+        }
+
+        /* Style the main content area */
+        .content {
+            padding: 20px;
+            grid-area: content; /* Place the content in the "content" grid area */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>Navbar</h1>
+            <!-- Add your navigation links here -->
+        </div>
+        <div class="header">
+            <h1>Header</h1>
+            <!-- Add header content here -->
+        </div>
+        <div class="content">
+            <!-- Your main content goes here -->
+            <h2>Main Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="footer">
+            <p>Footer &copy; 2023</p>
+        </div>
+    </div>
+</body>
+</html>
